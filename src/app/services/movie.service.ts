@@ -26,4 +26,8 @@ export class MovieService {
   }
 
 
+  //méthode pour les détails d'un film en fonction de l'id
+  getDetails(id) {
+    return this.http.get(`${this.url}?i=${id}&plot=full&apikey=${this.apiKey}`);
+  }
 }
